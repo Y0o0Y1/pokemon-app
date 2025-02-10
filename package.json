@@ -1,0 +1,56 @@
+{
+  "name": "pokemon-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.4.3",
+    "@reduxjs/toolkit": "^2.5.1",
+    "axios": "^1.7.9",
+    "cra-template-typescript": "1.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0",
+    "react-router": "^7.1.5",
+    "react-router-dom": "^7.1.5",
+    "react-scripts": "5.0.1",
+    "redux-persist": "^6.0.0"
+  },
+  "scripts": {
+    "start": "REACT_APP_BASE_API_URL=https://pokeapi.co/api/v2/ react-scripts start",
+    "start:staging": "REACT_APP_BASE_API_URL=https://staging-api.yourdomain.com react-scripts start",
+    "start:prod": "REACT_APP_BASE_API_URL=https://api.yourdomain.com react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.23.0",
+    "@typescript-eslint/parser": "^8.23.0",
+    "eslint": "^9.20.0",
+    "eslint-config-react-app": "^7.0.1",
+    "typescript": "^5.7.3"
+  }
+}
