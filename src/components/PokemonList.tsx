@@ -1,5 +1,5 @@
 import React from 'react';
-import {CircularProgress, Typography} from '@mui/material';
+import {CircularProgress, List, ListItem, Typography} from '@mui/material';
 import {useGetPokemonListQuery} from "../app/api/pokemonApi";
 
 
@@ -14,18 +14,16 @@ const PokemonList: React.FC = () => {
             <Typography variant="h5" gutterBottom>
                 Pokémon List
             </Typography>
-            {/*<List>*/}
-            {/*    {data?.results.map((pokemon) => (*/}
-            {/*        <ListItem*/}
-            {/*            key={pokemon.name}*/}
-            {/*            button*/}
-            {/*            onClick={() => onSelect(pokemon.name)}*/}
-            {/*            sx={{ cursor: 'pointer' }}*/}
-            {/*        >*/}
-            {/*            {pokemon.name}*/}
-            {/*        </ListItem>*/}
-            {/*    ))}*/}
-            {/*</List>*/}
+            <List>
+                {data?.results.map((pokemon) => (
+                    <ListItem
+                        key={pokemon.name}
+                        sx={{ cursor: 'pointer' }}
+                    >
+                        {pokemon.name}
+                    </ListItem>
+                ))}
+            </List>
         </div>
     );
 };
