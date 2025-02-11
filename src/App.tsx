@@ -1,8 +1,14 @@
 import { RouterProvider } from "react-router";
 import router from "./router/index.ts";
+import LoadingOverlay from "./components/LoadingOverlay.tsx";
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <LoadingOverlay />
+      <RouterProvider router={router} />;
+    </>
+  );
 }
 
 export default App;

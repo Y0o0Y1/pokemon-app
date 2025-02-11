@@ -3,6 +3,8 @@ import { axiosBaseQuery } from "../axiosBaseQuery.ts";
 import {
   PokemonApiRequestParams,
   PokemonApiResponse,
+  PokemonByIdApiRequest,
+  PokemonByIdApiResponse,
 } from "../DTO/pokemon.DTO.ts"; // Import the base query
 
 export const pokemonApi = createApi({
@@ -12,8 +14,11 @@ export const pokemonApi = createApi({
     getPokemonList: builder.query<PokemonApiResponse, PokemonApiRequestParams>({
       query: (params) => ({ url: "pokemon/", params }),
     }),
-    getPokemonById: builder.query<any, string | number>({
-      query: (id) => ({ url: `pokemon/${id}/` }),
+    getPokemonById: builder.query<
+      PokemonByIdApiResponse,
+      PokemonByIdApiRequest
+    >({
+      query: ({ id }) => ({ url: `pokemon/${id}/` }),
     }),
   }),
 });

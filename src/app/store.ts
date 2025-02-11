@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { pokemonApi } from "./api/services/pokemonApi.ts";
+import { uiSlice } from "./slices/uiSlice.ts";
 
 export const store = configureStore({
   reducer: {
+    ui: uiSlice.reducer,
     [pokemonApi.reducerPath]: pokemonApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
